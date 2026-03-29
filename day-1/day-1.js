@@ -9,3 +9,4 @@ for (let i = 0; i < parent.children.length; i++){
 
 parent.children[2].style.color = 'grey'
 console.log('parent')
+console.log(parent.children)
