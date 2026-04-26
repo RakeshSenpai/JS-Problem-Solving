@@ -5,9 +5,9 @@
   //   }
   // }
 
-  for(let i = 0; i < 4; i++){
+  for(let i = 0; i < 14; i++){
     let row = ''
-    for(let j = 0; j < 7; j++){
+    for(let j = 0; j < 6; j++){
       row += '☀️'
     }
     console.log(row)
