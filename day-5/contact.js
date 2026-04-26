@@ -19,13 +19,20 @@ function deleteContact(){
     if(isNaN(number) || number > contacts.length){
         console.log("Invalid")
         return;
-    }
+    } 
 
     contacts.splice(number - 1 , 1)
     console.log("Removed")
 }
 
-function searchContact(){}
+function searchContact(){
+    const searchString = prompt("Search: ").toLowerCase()
+    let result = []
+    for(let contact of contacts){
+        if(contact.name.toLowerCase().includes(searchString))result.push(contact)
+    }
+    listContact(result)
+}
 
 function listContact(contacts){
     for(let contact of contacts){
