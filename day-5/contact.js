@@ -15,6 +15,14 @@ function deleteContact(){
         const contact = contacts[i];
         console.log((i+1).toString() + ":" , contact.name)
     }
+    const number = parseInt(prompt('Enter an ID :'))
+    if(isNaN(number) || number > contacts.length){
+        console.log("Invalid")
+        return;
+    }
+
+    contacts.splice(number - 1 , 1)
+    console.log("Removed")
 }
 
 function searchContact(){}
