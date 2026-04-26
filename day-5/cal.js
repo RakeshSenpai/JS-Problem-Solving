@@ -1,23 +1,18 @@
 const prompt = require("prompt-sync")()
 
-let number1;
-let number2;
-while(true){
-    const number1 = parseFloat(prompt("Enter Number 1 : "))
-    if(isNaN(number1)){
-        console.log('Invalid')
+function getNumber(numberCount){ 
+    let number = parseFloat(prompt("Enter Number " + numberCount + ": "))
+    if(isNaN(number)){
+        console.log("Invalid")
     }else{
-        break;
+        return number;
     }
 }
-while(true){
-    const number2 = parseFloat(prompt("Enter Number 2 : "))
-    if(isNaN(number2)){
-        console.log('Invalid')
-    }else{
-        break;
-    }
-}
+
+const number1 = getNumber('one')
+const number2 = getNumber('two')
+
+
 const operator = prompt("Enter the operator : ")
 
 let result ;
@@ -33,6 +28,10 @@ switch(operator){
         result = number1 * number2
         break;
     case "/":
+        if(number2 === 0){
+            valid = false;
+            console.log("Zero division err.")
+        }
         result = number1 / number2
         break;
         default:
