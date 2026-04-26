@@ -15,11 +15,14 @@ function deleteContact(){}
 function searchContact(){}
 
 function listContact(contacts){
-    console.log(contacts)
+    for(let contact of contacts){
+        console.log("Name: " , contact.name)
+        console.log("Email: " , contact.email)
+    }
 }
 
-const contacts = []
-let keepGoing = true
+const contacts = [];
+let keepGoing = true;
 
 while(keepGoing){
     const number = prompt('Enter an operation (1-5) : ')
