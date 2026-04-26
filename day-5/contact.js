@@ -10,7 +10,12 @@ function addContact(){
     contacts.push(contact)
 }
 
-function deleteContact(){}
+function deleteContact(){
+    for(let i = 0; i < contacts.length; i++){
+        const contact = contacts[i];
+        console.log((i+1).toString() + ":" , contact.name)
+    }
+}
 
 function searchContact(){}
 
