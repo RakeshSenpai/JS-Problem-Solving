@@ -36,8 +36,8 @@ function searchContact(){
 
 function listContact(contacts){
     for(let contact of contacts){
-        console.log("Name: " , contact.name)
-        console.log("Email: " , contact.email)
+        console.log("Name" , contact.name)
+        console.log("Email" , contact.email)
     }
 }
 
