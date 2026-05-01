@@ -21,3 +21,8 @@ const board = [
     [" ", " ", " "],
     [" ", " ", " "]
 ]
+
+makeMove("X" , board)
+console.log(board)
+makeMove("0", board)
+console.log(board)
