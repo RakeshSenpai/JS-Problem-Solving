@@ -27,3 +27,5 @@ fetch('https://jsonplaceholder.typicode.com/users')
         return{name : user.name, email: user.email, element: card}
     })
 })
+
+console.log('hello')
